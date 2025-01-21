@@ -1,0 +1,130 @@
+.lang-btn {
+    background: transparent;
+    border: none;
+    padding: 3px 6px;
+    font-size: 11px;
+    color: var(--text-color, #666);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    opacity: 0.7;
+}
+
+.lang-btn:hover {
+    opacity: 1;
+    color: var(--hover-text-color, #333);
+}
+
+.lang-btn.active {
+    color: #1EAEDB;
+    opacity: 1;
+}
+
+.lang-btn i {
+    font-size: 10px;
+    margin-right: 1px;
+}
+
+/* 深色主题 */
+@media (prefers-color-scheme: dark) {
+    .lang-btn {
+        --text-color: #999;
+        --hover-text-color: #fff;
+    }
+}
+
+/* 移动端适配 */
+@media (max-width: 480px) {
+    .language-switcher {
+        position: fixed;
+        top: 8px;
+        right: 8px;
+        display: inline-flex;
+        gap: 1px;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 3px;
+        padding: 2px;
+    }
+    
+    .lang-btn {
+        all: unset;
+        cursor: pointer;
+        font-size: 10px;
+        color: var(--text-color, #888);
+        opacity: 0.6;
+        transition: opacity 0.2s ease;
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
+        border: 0 !important;
+        outline: 0 !important;
+    }
+    
+    .lang-btn:hover,
+    .lang-btn:focus,
+    .lang-btn:focus-visible,
+    .lang-btn:active,
+    .lang-btn:visited,
+    .lang-btn:link {
+        opacity: 1;
+        outline: 0;
+        border: 0;
+        text-decoration: none;
+        box-shadow: none;
+    }
+    
+    /* 深色主题 */
+    @media (prefers-color-scheme: dark) {
+        .lang-btn {
+            --text-color: #aaa;
+        }
+    }
+    .lang-btn.active {
+        color: #1EAEDB;
+        opacity: 1;
+    }
+    
+    /* 深色主题 */
+    @media (prefers-color-scheme: dark) {
+        .lang-btn {
+            --text-color: #999;
+        }
+        .language-switcher {
+            background: rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+.language-switcher {
+    position: fixed;
+    top: 10px;
+    right: 15px;
+    z-index: 1000;
+}
+
+.lang-switch {
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--text-color, rgba(0, 0, 0, 0.5));
+    opacity: 0.45;
+    cursor: pointer;
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    letter-spacing: 0.2px;
+}
+
+.lang-switch:hover {
+    opacity: 0.85;
+    letter-spacing: 0.25px;
+    transform: translateY(-1px);
+}
+
+.lang-switch:active {
+    transform: translateY(1px) scale(0.95);
+    opacity: 0.9;
+}
+
+@media (prefers-color-scheme: dark) {
+    .lang-switch {
+        --text-color: rgba(255, 255, 255, 0.5);
+    }
+}
