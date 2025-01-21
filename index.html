@@ -28,158 +28,144 @@
 
     <!-- Brand Styles -->
     <link rel="stylesheet" href="css/brands.css">
+    <link rel="stylesheet" href="css/language-switcher.css">
 
 
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="images/me.jpeg">
 
+    <!-- 在 head 末尾添加 -->
+    <script src="js/i18n.js"></script>
 </head>
 
 <body>
+    <div class="language-switcher">
+        <div class="lang-switch" onclick="toggleLanguage()">中 / En</div>
+    </div>
 
-<!-- Primary Page Layout
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<div class="container">
-    <div class="row">
-        <div class="column" style="margin-top: 4%">
+    <div class="container">
+        <div class="row">
+            <div class="column" style="margin-top: 10%">
+                <img src="images/me.jpeg" class="avatar" alt="">
 
-            <!-- Your Image Here -->
-            <img src="images/me.jpeg" class="avatar" alt="">
+                <!-- 修改标题，添加 data-i18n 属性 -->
+                <h2 role="heading" data-i18n="title">顾惜朝</h2>
 
-            <!-- Title -->
-            <h2 role="heading">顾惜朝</h2>
+                <!-- 修改描述部分 -->
+                <p>
+                    <span data-i18n="description">我的 App 作品</span>
+                    <br>
+                    <a style="color: darkgray; font-size: 9px; font-style: italic;" data-i18n="feedback">
+                        反馈📮： admin@iofree.xyz
+                    </a>
+                </p>
 
-            <!-- Short Bio -->
-            <p>我的 App 作品
-                <br>
-                <a style="color: darkgray; font-size: 9px; font-style: italic;">
-                    反馈📮： admin@iofree.xyz
+                <p>
+                    <a href="https://docs.qq.com/doc/DVHFJV21rWFh3TGVX" target="_blank"
+                        style="color: darkgray; font-size: 14px; font-style: italic;" data-i18n="android_download">
+                        🔗 所有App安卓版 备用下载地址 🔗
+                    </a>
+                    <br>
+                    <a style="color: darkgray; font-size: 10px; font-style: italic;" data-i18n="android_update_tip">
+                        安卓版 更新时来此网站下载最新版APK，覆盖安装即可
+                    </a>
+                </p>
+
+                <!-- 人生笔记 -->
+                <a class="button button-bluesky" href="https://lifelog.iofree.xyz/" target="_blank" rel="noopener"
+                    role="button">
+                    <img class="icon"
+                        src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/c8/41/7c/c8417cce-a8ee-9d2b-9021-6b762d92df1d/AppIcon-1x_U007emarketing-0-10-0-0-85-220-0.png/460x0w.webp"
+                        alt="">
+                    人生笔记
                 </a>
-            </p>
-
-            <p>
-                <a href="https://docs.qq.com/doc/DVHFJV21rWFh3TGVX"
-                   target="_blank"
-                   style="color: darkgray; font-size: 14px; font-style: italic;">
-                    🔗 所有App安卓版 备用下载地址 🔗
+                <a class="button button-gofundme" href="https://apk.iofree.xyz/lifelog.apk" target="_blank"
+                    rel="noopener" role="button">
+                    <img class="icon"
+                        src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/c8/41/7c/c8417cce-a8ee-9d2b-9021-6b762d92df1d/AppIcon-1x_U007emarketing-0-10-0-0-85-220-0.png/460x0w.webp"
+                        alt="">
+                    人生笔记 安卓版 下载
                 </a>
                 <br>
-                <a style="color: darkgray; font-size: 10px; font-style: italic;">
-                    安卓版 更新时来此网站下载最新版APK，覆盖安装即可</a>
-            </p>
+                <br>
 
-            <!-- 人生笔记 -->
-            <a class="button button-bluesky"
-               href="https://lifelog.iofree.xyz/"
-               target="_blank" rel="noopener" role="button">
-                <img class="icon"
-                     src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/c8/41/7c/c8417cce-a8ee-9d2b-9021-6b762d92df1d/AppIcon-1x_U007emarketing-0-10-0-0-85-220-0.png/460x0w.webp"
-                     alt="">
-                人生笔记
-            </a>
-            <a class="button button-gofundme"
-               href="https://apk.iofree.xyz/lifelog.apk"
-               target="_blank" rel="noopener" role="button">
-                <img class="icon"
-                     src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/c8/41/7c/c8417cce-a8ee-9d2b-9021-6b762d92df1d/AppIcon-1x_U007emarketing-0-10-0-0-85-220-0.png/460x0w.webp"
-                     alt="">
-                人生笔记 安卓版 下载
-            </a>
-            <br>
-            <br>
+                <!-- 人生规划局-->
+                <a class="button button-bluesky" href="https://planning.iofree.xyz/" target="_blank" rel="noopener"
+                    role="button">
+                    <img class="icon"
+                        src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/91/70/db/9170db3e-c79e-b2b1-4e2a-ffa58bf19cec/AppIcon-1x_U007emarketing-0-10-0-0-85-220-0.png/460x0w.webp"
+                        alt="">
+                    人生规划局
+                </a>
+                <a class="button button-gofundme" href="https://apk.iofree.xyz/planning.apk" target="_blank"
+                    rel="noopener" role="button">
+                    <img class="icon"
+                        src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/91/70/db/9170db3e-c79e-b2b1-4e2a-ffa58bf19cec/AppIcon-1x_U007emarketing-0-10-0-0-85-220-0.png/460x0w.webp"
+                        alt="">
+                    人生规划局 安卓版 下载
+                </a><br>
+                <br>
 
-            <!-- 人生规划局-->
-            <a class="button button-bluesky"
-               href="https://planning.iofree.xyz/"
-               target="_blank" rel="noopener"
-               role="button">
-                <img class="icon"
-                     src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/91/70/db/9170db3e-c79e-b2b1-4e2a-ffa58bf19cec/AppIcon-1x_U007emarketing-0-10-0-0-85-220-0.png/460x0w.webp"
-                     alt="">
-                人生规划局
-            </a>
-            <a class="button button-gofundme"
-               href="https://apk.iofree.xyz/planning.apk"
-               target="_blank" rel="noopener"
-               role="button">
-                <img class="icon"
-                     src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/91/70/db/9170db3e-c79e-b2b1-4e2a-ffa58bf19cec/AppIcon-1x_U007emarketing-0-10-0-0-85-220-0.png/460x0w.webp"
-                     alt="">
-                人生规划局 安卓版 下载
-            </a
-            ><br>
-            <br>
+                <!-- 不忘提醒 -->
+                <a class="button button-bluesky" href="https://apps.apple.com/cn/app/id1600249479" target="_blank"
+                    rel="noopener" role="button">
+                    <img class="icon"
+                        src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/ec/6e/81/ec6e8125-15bd-3b69-0088-ffb3c03090a9/AppIcon-1x_U007emarketing-0-7-0-0-85-220-0.png/460x0w.webp"
+                        alt="">
+                    不忘提醒
+                </a>
+                <br>
+                <br>
 
-            <!-- 不忘提醒 -->
-            <a class="button button-bluesky"
-               href="https://apps.apple.com/cn/app/id1600249479"
-               target="_blank"
-               rel="noopener"
-               role="button">
-                <img class="icon"
-                     src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/ec/6e/81/ec6e8125-15bd-3b69-0088-ffb3c03090a9/AppIcon-1x_U007emarketing-0-7-0-0-85-220-0.png/460x0w.webp"
-                     alt="">
-                不忘提醒
-            </a>
-            <br>
-            <br>
-
-            <!-- PasteQ -->
-            <a class="button button-bluesky"
-               href="https://apps.apple.com/cn/app/id6443971843"
-               target="_blank"
-               rel="noopener"
-               role="button">
-                <img class="icon"
-                     src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/98/48/24/98482467-60d8-8276-2dcb-674e96e1f08a/AppIcon-85-220-4-2x.png/460x0w.webp"
-                     alt="">
-                PasteQ
-            </a>
-            <br>
-            <br>
-            <br>
+                <!-- PasteQ -->
+                <a class="button button-bluesky" href="https://apps.apple.com/cn/app/id6443971843" target="_blank"
+                    rel="noopener" role="button">
+                    <img class="icon"
+                        src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/98/48/24/98482467-60d8-8276-2dcb-674e96e1f08a/AppIcon-85-220-4-2x.png/460x0w.webp"
+                        alt="">
+                    PasteQ
+                </a>
+                <br>
+                <br>
+                <br>
 
 
-            <p>关注我</p>
+                <p data-i18n="follow_me">关注我</p>
 
-            <a class="button button-apple-music-alt"
-               href="https://www.xiaohongshu.com/user/profile/626dc2bc00000000210247f0" target="_blank" rel="noopener"
-               role="button">
-                <img class="icon"
-                     src="https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/97/9d/41/979d4128-352c-1fcc-afc5-193279db6c8a/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/460x0w.webp"
-                     alt="">
-                小红书</a><br>
+                <a class="button button-apple-music-alt"
+                    href="https://www.xiaohongshu.com/user/profile/626dc2bc00000000210247f0" target="_blank"
+                    rel="noopener" role="button">
+                    <img class="icon"
+                        src="https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/97/9d/41/979d4128-352c-1fcc-afc5-193279db6c8a/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/460x0w.webp"
+                        alt="">
+                    小红书</a><br>
 
-            <a class="button button-untappd"
-               href="https://weibo.com/u/5894049515" target="_blank" rel="noopener"
-               role="button">
-                <img class="icon"
-                     src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/a2/1e/a8/a21ea875-5612-6553-7bb4-6560553d94f7/WeiboAppIcon-0-0-1x_U007emarketing-0-4-0-0-85-220.png/460x0w.webp"
-                     alt="">
-                微博</a><br>
+                <a class="button button-untappd" href="https://weibo.com/u/5894049515" target="_blank" rel="noopener"
+                    role="button">
+                    <img class="icon"
+                        src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/a2/1e/a8/a21ea875-5612-6553-7bb4-6560553d94f7/WeiboAppIcon-0-0-1x_U007emarketing-0-4-0-0-85-220.png/460x0w.webp"
+                        alt="">
+                    微博</a><br>
 
-            <!-- Twitter (archiving soon, see 'X') -->
-            <a class="button button-twit" href="https://twitter.com/Allen_Xuxu" target="_blank" rel="noopener"
-               role="button">
-                <img class="icon" src="images/icons/twitter.svg" alt="">
-                Twitter</a><br>
+                <!-- Twitter (archiving soon, see 'X') -->
+                <a class="button button-twit" href="https://twitter.com/Allen_Xuxu" target="_blank" rel="noopener"
+                    role="button">
+                    <img class="icon" src="images/icons/twitter.svg" alt="">
+                    Twitter</a><br>
 
-            <!-- YouTube -->
-            <a class="button button-yt"
-               href="https://www.youtube.com/channel/UC6bVZVPtoFkslpX3V7RaRdQ" target="_blank" rel="noopener"
-               role="button">
-                <img class="icon"
-                     src="images/icons/youtube.svg"
-                     alt="">YouTube</a><br>
-            <br>
-            <br>
-            <br>
+                <!-- YouTube -->
+                <a class="button button-yt" href="https://www.youtube.com/channel/UC6bVZVPtoFkslpX3V7RaRdQ"
+                    target="_blank" rel="noopener" role="button">
+                    <img class="icon" src="images/icons/youtube.svg" alt="">YouTube</a><br>
+                <br>
+                <br>
+                <br>
+            </div>
         </div>
     </div>
-</div>
 
-<!-- End Document
+    <!-- End Document
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 
