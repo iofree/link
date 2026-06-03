@@ -1,144 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
-
-    <!-- Page Information
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8">
-    <title>顾惜朝's App</title>
-    <meta name="description" content="https://iofree.xyz">
-    <meta name="author" content="Allen">
-
-    <!-- Mobile Specific Metas
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <title>顾惜朝 · 独立开发者</title>
+    <meta name="description" content="顾惜朝 / Allen 的独立开发者主页 — 人生笔记、人生规划局、不忘提醒、PasteQ。">
+    <meta name="author" content="顾惜朝 (Allen)">
 
-    <!-- CSS
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Open Graph / 分享预览 -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="顾惜朝 · 独立开发者">
+    <meta property="og:description" content="独立设计与开发 App — 人生笔记、人生规划局、不忘提醒、PasteQ。">
+    <meta property="og:image" content="images/me.jpeg">
+    <meta property="og:url" content="https://iofree.xyz">
+    <meta name="twitter:card" content="summary">
 
-    <!-- Themes:
-            Auto:   css/skeleton-auto.css
-            Light:  css/skeleton-light.css
-            Dark:   css/skeleton-dark.css
-     -->
-    <link rel="stylesheet" href="css/skeleton-auto.css">
+    <link rel="icon" type="image/jpeg" href="images/me.jpeg">
+    <link rel="stylesheet" href="css/style.css">
 
-    <!-- Brand Styles -->
-    <link rel="stylesheet" href="css/brands.css">
-    <link rel="stylesheet" href="css/language-switcher.css">
+    <!-- 预连接苹果 CDN，加快 App 图标加载 -->
+    <link rel="preconnect" href="https://is1-ssl.mzstatic.com" crossorigin>
 
-
-    <!-- Favicon
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="icon" type="image/png" href="images/me.jpeg">
-
-    <!-- 在 head 末尾添加 -->
-    <script src="js/i18n.js"></script>
+    <script src="js/i18n.js" defer></script>
 </head>
 
 <body>
-    <div class="language-switcher">
-        <div class="lang-switch" onclick="toggleLanguage()">中 / En</div>
+    <!-- 极光背景 -->
+    <div class="aurora" aria-hidden="true">
+        <div class="aurora__blob aurora__blob--1"></div>
+        <div class="aurora__blob aurora__blob--2"></div>
+        <div class="aurora__blob aurora__blob--3"></div>
+        <div class="aurora__blob aurora__blob--4"></div>
     </div>
+    <div class="aurora__veil" aria-hidden="true"></div>
+    <div class="aurora__grain" aria-hidden="true"></div>
 
-    <div class="container">
-        <div class="row">
-            <div class="column" style="margin-top: 10%">
-                <img src="images/me.jpeg" class="avatar" alt="">
+    <!-- 语言切换 -->
+    <button class="lang" type="button" aria-label="切换语言 / Switch language">中 / EN</button>
 
-                <!-- 修改标题，添加 data-i18n 属性 -->
-                <h2 role="heading" data-i18n="title"></h2>
+    <main class="page">
 
-                <!-- 修改描述部分 -->
-                <p>
-                    <span data-i18n="description"></span>
-                    <br>
-                    <a style="color: darkgray; font-size: 9px; font-style: italic;" data-i18n="feedback">
-                    </a>
-                </p>
-
-                <!-- 人生笔记 -->
-                <a class="button button-bluesky" href="https://lifelog.iofree.xyz/" target="_blank" rel="noopener"
-                    role="button">
-                    <img class="icon"
-                        src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/c8/41/7c/c8417cce-a8ee-9d2b-9021-6b762d92df1d/AppIcon-1x_U007emarketing-0-10-0-0-85-220-0.png/460x0w.webp"
-                        alt="">
-                    人生笔记
-                </a>
-                <br>
-
-                <!-- 人生规划局-->
-                <a class="button button-bluesky" href="https://planning.iofree.xyz/" target="_blank" rel="noopener"
-                    role="button">
-                    <img class="icon"
-                        src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/91/70/db/9170db3e-c79e-b2b1-4e2a-ffa58bf19cec/AppIcon-1x_U007emarketing-0-10-0-0-85-220-0.png/460x0w.webp"
-                        alt="">
-                    人生规划局
-                </a>
-                <br>
-
-                <!-- 不忘提醒 -->
-                <a class="button button-bluesky" href="https://apps.apple.com/cn/app/id1600249479" target="_blank"
-                    rel="noopener" role="button">
-                    <img class="icon"
-                        src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/ec/6e/81/ec6e8125-15bd-3b69-0088-ffb3c03090a9/AppIcon-1x_U007emarketing-0-7-0-0-85-220-0.png/460x0w.webp"
-                        alt="">
-                    不忘提醒
-                </a>
-                <br>
-
-                <!-- PasteQ -->
-                <a class="button button-bluesky" href="https://apps.apple.com/cn/app/id6443971843" target="_blank"
-                    rel="noopener" role="button">
-                    <img class="icon"
-                        src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/98/48/24/98482467-60d8-8276-2dcb-674e96e1f08a/AppIcon-85-220-4-2x.png/460x0w.webp"
-                        alt="">
-                    PasteQ
-                </a>
-                <br>
-                <br>
-                <br>
-
-
-                <p data-i18n="follow_me">关注我</p>
-
-                <a class="button button-apple-music-alt"
-                    href="https://www.xiaohongshu.com/user/profile/626dc2bc00000000210247f0" target="_blank"
-                    rel="noopener" role="button">
-                    <img class="icon"
-                        src="https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/97/9d/41/979d4128-352c-1fcc-afc5-193279db6c8a/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/460x0w.webp"
-                        alt="">
-                    小红书</a><br>
-
-                <a class="button button-untappd" href="https://weibo.com/u/5894049515" target="_blank" rel="noopener"
-                    role="button">
-                    <img class="icon"
-                        src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/a2/1e/a8/a21ea875-5612-6553-7bb4-6560553d94f7/WeiboAppIcon-0-0-1x_U007emarketing-0-4-0-0-85-220.png/460x0w.webp"
-                        alt="">
-                    微博</a><br>
-
-                <!-- Twitter (archiving soon, see 'X') -->
-                <a class="button button-twit" href="https://twitter.com/Allen_Xuxu" target="_blank" rel="noopener"
-                    role="button">
-                    <img class="icon" src="images/icons/twitter.svg" alt="">
-                    Twitter</a><br>
-
-                <!-- YouTube -->
-                <a class="button button-yt" href="https://www.youtube.com/channel/UC6bVZVPtoFkslpX3V7RaRdQ"
-                    target="_blank" rel="noopener" role="button">
-                    <img class="icon" src="images/icons/youtube.svg" alt="">YouTube</a><br>
-                <br>
-                <br>
-                <br>
-            </div>
+        <!-- Hero -->
+        <div class="hero__avatar-wrap">
+            <img class="hero__avatar" src="images/me.jpeg" alt="顾惜朝">
         </div>
-    </div>
+        <h1 class="hero__name" data-i18n="name">顾惜朝</h1>
+        <p class="hero__kicker" data-i18n="kicker">独立开发者</p>
+        <p class="hero__lede" data-i18n="lede">我独立设计与开发 App，帮你记录生活、规划人生、不忘琐事。</p>
 
-    <!-- End Document
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <!-- 作品 -->
+        <h2 class="section-label" data-i18n="section_apps">作品</h2>
+        <nav class="links">
+            <a class="link-card" href="https://lifelog.iofree.xyz/" target="_blank" rel="noopener">
+                <img class="link-card__icon" loading="lazy"
+                    src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/c8/41/7c/c8417cce-a8ee-9d2b-9021-6b762d92df1d/AppIcon-1x_U007emarketing-0-10-0-0-85-220-0.png/460x0w.webp"
+                    alt="">
+                <span class="link-card__body">
+                    <span class="link-card__title" data-i18n="app_lifelog_name">人生笔记</span>
+                    <span class="link-card__desc" data-i18n="app_lifelog_desc">记录每一刻的生活日记</span>
+                </span>
+                <span class="link-card__arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a class="link-card" href="https://planning.iofree.xyz/" target="_blank" rel="noopener">
+                <img class="link-card__icon" loading="lazy"
+                    src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/91/70/db/9170db3e-c79e-b2b1-4e2a-ffa58bf19cec/AppIcon-1x_U007emarketing-0-10-0-0-85-220-0.png/460x0w.webp"
+                    alt="">
+                <span class="link-card__body">
+                    <span class="link-card__title" data-i18n="app_planning_name">人生规划局</span>
+                    <span class="link-card__desc" data-i18n="app_planning_desc">规划目标与人生进度</span>
+                </span>
+                <span class="link-card__arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a class="link-card" href="https://apps.apple.com/cn/app/id1600249479" target="_blank" rel="noopener">
+                <img class="link-card__icon" loading="lazy"
+                    src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/ec/6e/81/ec6e8125-15bd-3b69-0088-ffb3c03090a9/AppIcon-1x_U007emarketing-0-7-0-0-85-220-0.png/460x0w.webp"
+                    alt="">
+                <span class="link-card__body">
+                    <span class="link-card__title" data-i18n="app_reminder_name">不忘提醒</span>
+                    <span class="link-card__desc" data-i18n="app_reminder_desc">强大的提醒与倒数日</span>
+                </span>
+                <span class="link-card__arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a class="link-card" href="https://apps.apple.com/cn/app/id6443971843" target="_blank" rel="noopener">
+                <img class="link-card__icon" loading="lazy"
+                    src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/98/48/24/98482467-60d8-8276-2dcb-674e96e1f08a/AppIcon-85-220-4-2x.png/460x0w.webp"
+                    alt="">
+                <span class="link-card__body">
+                    <span class="link-card__title" data-i18n="app_pasteq_name">PasteQ</span>
+                    <span class="link-card__desc" data-i18n="app_pasteq_desc">受到raycast启发，开发的无需鼠标，全靠快捷键就能搜索、复制、操作的悬浮剪切板历史工具</span>
+                </span>
+                <span class="link-card__arrow" aria-hidden="true">↗</span>
+            </a>
+        </nav>
+
+        <!-- 关注我 -->
+        <h2 class="section-label" data-i18n="section_social">关注我</h2>
+        <div class="socials">
+            <a class="social" href="https://www.xiaohongshu.com/user/profile/626dc2bc00000000210247f0"
+                target="_blank" rel="noopener" aria-label="小红书" data-i18n="social_xhs" data-i18n-attr="aria-label">
+                <img loading="lazy"
+                    src="https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/97/9d/41/979d4128-352c-1fcc-afc5-193279db6c8a/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/460x0w.webp"
+                    alt="">
+            </a>
+            <a class="social" href="https://weibo.com/u/5894049515" target="_blank" rel="noopener"
+                aria-label="微博" data-i18n="social_weibo" data-i18n-attr="aria-label">
+                <img loading="lazy"
+                    src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/a2/1e/a8/a21ea875-5612-6553-7bb4-6560553d94f7/WeiboAppIcon-0-0-1x_U007emarketing-0-4-0-0-85-220.png/460x0w.webp"
+                    alt="">
+            </a>
+            <a class="social" href="https://twitter.com/Allen_Xuxu" target="_blank" rel="noopener"
+                aria-label="Twitter" data-i18n="social_twitter" data-i18n-attr="aria-label">
+                <img src="images/icons/twitter.svg" alt="">
+            </a>
+            <a class="social" href="https://www.youtube.com/channel/UC6bVZVPtoFkslpX3V7RaRdQ" target="_blank"
+                rel="noopener" aria-label="YouTube" data-i18n="social_youtube" data-i18n-attr="aria-label">
+                <img src="images/icons/youtube.svg" alt="">
+            </a>
+        </div>
+
+        <!-- 页脚 -->
+        <footer class="footer">
+            <span data-i18n="feedback">反馈</span> ✉ <a href="mailto:admin@iofree.xyz">admin@iofree.xyz</a><br>
+            <span data-i18n="copyright">© 2026 顾惜朝 · iofree.xyz</span>
+        </footer>
+
+    </main>
 </body>
 
 </html>

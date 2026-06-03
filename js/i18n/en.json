@@ -1,9 +1,22 @@
-
 {
-  "title": "Allen's Apps",
-  "description": "My Apps",
-  "feedback": "Feedback📮: admin@iofree.xyz",
-  "android_download": "🔗 Android Apps Alternative Download 🔗",
-  "android_update_tip": "For Android version updates, download the latest APK here and install",
-  "follow_me": "Follow Me"
+  "title": "Allen · Indie Developer",
+  "name": "Allen",
+  "kicker": "Indie Developer",
+  "lede": "I independently design & build apps to help you journal life, plan ahead, and never forget the little things.",
+  "section_apps": "Apps",
+  "section_social": "Elsewhere",
+  "app_lifelog_name": "Lifelog Note",
+  "app_lifelog_desc": "Journal every moment of life",
+  "app_planning_name": "Life Planning",
+  "app_planning_desc": "Plan your goals and progress",
+  "app_reminder_name": "Remind",
+  "app_reminder_desc": "Powerful reminders & countdowns",
+  "app_pasteq_name": "PasteQ",
+  "app_pasteq_desc": "A Raycast-inspired floating clipboard-history tool — search, copy, and act entirely with keyboard shortcuts, no mouse needed.",
+  "social_xhs": "Xiaohongshu",
+  "social_weibo": "Weibo",
+  "social_twitter": "Twitter",
+  "social_youtube": "YouTube",
+  "feedback": "Feedback",
+  "copyright": "© 2026 Allen · iofree.xyz"
 }
