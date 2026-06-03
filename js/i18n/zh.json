@@ -1,9 +1,22 @@
-
 {
-  "title": "顾惜朝's App",
-  "description": "我的 App 作品",
-  "feedback": "反馈📮：admin@iofree.xyz",
-  "android_download": "🔗 所有App安卓版 备用下载地址 🔗",
-  "android_update_tip": "安卓版 更新时来此网站下载最新版APK，覆盖安装即可",
-  "follow_me": "关注我"
+  "title": "顾惜朝 · 独立开发者",
+  "name": "顾惜朝",
+  "kicker": "独立开发者",
+  "lede": "我独立设计与开发 App，帮你记录生活、规划人生、不忘琐事。",
+  "section_apps": "作品",
+  "section_social": "关注我",
+  "app_lifelog_name": "人生笔记",
+  "app_lifelog_desc": "记录每一刻的生活日记",
+  "app_planning_name": "人生规划局",
+  "app_planning_desc": "规划目标与人生进度",
+  "app_reminder_name": "不忘提醒",
+  "app_reminder_desc": "强大的提醒与倒数日",
+  "app_pasteq_name": "PasteQ",
+  "app_pasteq_desc": "受到raycast启发，开发的无需鼠标，全靠快捷键就能搜索、复制、操作的悬浮剪切板历史工具",
+  "social_xhs": "小红书",
+  "social_weibo": "微博",
+  "social_twitter": "Twitter",
+  "social_youtube": "YouTube",
+  "feedback": "反馈",
+  "copyright": "© 2026 顾惜朝 · iofree.xyz"
 }
